@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Product, Home, Signup, Login, Comment, Order, Load
+from .models import Product, Home, Signup, Login, Comment
 
 
 def home(request):
@@ -30,10 +30,7 @@ def comment(request):
     return render(request, 'comment.html', {'comment': comment})
 
 def order(request):
-    order = Order.objects.all()
     return render(request, 'order.html', {'order': order})
 
 def load(request):
-    load = Load.objects.all()
     return render(request, 'load.html', {'load': load})
-

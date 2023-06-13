@@ -38,11 +38,10 @@ class Comment(models.Model):
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
 
-class Order(models.Model):
+class Notexits(models.Model):
     objects = None
     name = models.CharField(max_length=255)
-    email = models.CharField(max_length=255)
+    price = models.FloatField()
+    stock = models.IntegerField()
+    image_url = models.CharField(max_length=2083)
 
-class Load(models.Model):
-    objects = None
-    img_urls = models.CharField(max_length=2083)
